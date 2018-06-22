@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron text-center">
+        <h3 class="text-danger">
+            <!-- The following is an if-else ladder example -->
+            <!-- for can be used as
+                {% for this in that %}
+                {% endfor %} 
+             -->
+            {% if error == "username" %}
+                Wrong Username
+            {% elif error == "password" %}
+                Wrong Password
+            {% endif %}
+        </h3>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h4>{{username}}</h4>
+    <hr>
+    <div class="row">
+        <div class="col-9">
+            {{data}}
+        </div>
+        <!-- Any multimedia file that has to be accessed has to be kept in the static folder and accessed from there -->
+        <!-- {{variable_name}} is used to access a variable -->
+        <!-- variable_name is same as the LHS in the render_template method -->
+        <div class="col-3">
+            <img src="/static/{{username}}.png" width="50%" alt="{{username}}">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
